@@ -1,0 +1,32 @@
+#getted-data {
+  background-color: rgba(17, 18, 22, 0.8);
+  color: white;
+  width: 900px;
+  height: auto;
+  max-height: 260px;
+  display: flex;
+  overflow: auto;
+  border: 1px solid rgba(17, 18, 22, 0.8);
+  padding: 15px;
+  align-self: center;
+  justify-self: center;
+  word-wrap:break-word;
+}
+
+#error {
+  color: rgb(170, 1, 1);
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: gray;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#loading {
+  color: #a3caba;
+  font-size: 1.2rem;
+}

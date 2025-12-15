@@ -1,0 +1,143 @@
+#title-page {
+  text-align: center;
+  color: gray;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.action-buttons {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border: 2px solid rgba(42, 45, 54, 0.8);
+    background-color: rgba(25, 21, 35, 0.361);
+
+    .request-btn{
+        width: 220px;
+        border: 1px solid rgba(42, 45, 54, 0.8);
+        color: gray;
+        background-color: rgba(32, 31, 36, 0.248);
+        padding: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #get-btn:hover{
+        background-color: rgb(13, 184, 13);
+        color: white;
+        border: 0;
+        border-radius: 15px;
+    }
+
+    #get-one-btn:hover{
+        background-color: rgb(118, 153, 5);
+        color: white;
+        border: 0;
+        border-radius: 15px;
+    }
+
+    #post-btn:hover{
+        background-color: rgb(12, 155, 150);
+        color: white;
+        border: 0;
+        border-radius: 15px;
+    }
+
+    #put-btn:hover{
+        background-color: rgb(11, 7, 129);
+        color: white;
+        border: 0;
+        border-radius: 15px;
+    }
+
+    #delete-btn:hover{
+        background-color: rgb(129, 11, 11);
+        color: white;
+        border: 0;
+        border-radius: 15px;
+    }
+}
+
+.inputs {
+    width: 250px;
+    padding: 10px;
+    align-self: center;
+    margin: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(42, 45, 54, 0.8);
+    background-color: rgba(25, 21, 35, 0.361);
+    color: gray;
+}
+
+.inputs:hover {
+    background-color: rgba(25, 21, 35, 0.661);
+    color: lightgray;
+}
+
+.inputs:focus {
+    outline: none;
+    border: 1px solid rgba(42, 45, 54, 0.8);
+    background-color: rgba(25, 21, 35, 0.661);
+    color: lightgray;
+}
+
+.submit-btn {
+    width: 150px;
+    padding: 10px;
+    align-self: center;
+    margin: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(76, 86, 95, 0.8);
+    background-color: rgba(25, 26, 30, 0.619);
+    color: lightgray;
+    cursor: pointer;
+    transition: all 0.05s ease;
+}
+
+#get-submit-btn:hover {
+    background-color: rgb(112, 148, 3);
+    color: lightgray;
+}
+
+#get-submit-btn:active {
+    background-color: rgb(78, 95, 1);
+    color: white;
+    transform: scale(0.98);
+}
+
+#post-submit-btn:hover {
+    background-color: rgb(12, 155, 150);
+    color: lightgray;
+}
+
+#post-submit-btn:active {
+    background-color: rgb(4, 75, 73);
+    color: white;
+    transform: scale(0.98);
+}
+
+#put-submit-btn:hover {
+    background-color: rgb(11, 7, 129);
+    color: lightgray;
+}
+
+#put-submit-btn:active {
+    background-color: rgb(3, 2, 48);
+    color: white;
+    transform: scale(0.98);
+}
+
+#delete-submit-btn:hover {
+    background-color: rgb(129, 11, 11);
+    color: lightgray;
+}
+
+#delete-submit-btn:active {
+    background-color: rgb(87, 4, 4);
+    color: white;
+    transform: scale(0.98);
+}

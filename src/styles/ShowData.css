@@ -1,0 +1,40 @@
+.users {
+    list-style: none;
+}
+
+.data {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.user-card {
+    background-color: rgba(17, 18, 22, 0.8);
+    color: rgb(78, 142, 137);
+    width: 550px;
+    height: auto;
+    max-height: 260px;
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: auto;
+    border: 2px solid rgba(42, 45, 54, 0.8);
+    padding: 15px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.post-response {
+    background-color: rgba(14, 18, 18, 0.8);
+    color: white;
+    width: 550px;
+    height: auto;
+    max-height: 260px;
+    display: grid;
+    text-align: center;
+    border: 2px solid rgba(42, 45, 54, 0.8);
+    padding: 15px;
+    align-self: center;
+    justify-self: center;
+}
