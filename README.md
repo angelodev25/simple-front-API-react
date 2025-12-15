@@ -4,8 +4,6 @@ Se pueden realizar todas las operaciones básica CRUD des aquí.
 
 Para probarla usé la API libre de [jsonplaceholder](https://jsonplaceholder.typicode.com/users), con información de usuarios.
 
-Poca ayuda de IA, usada sólo en CSS y en autocompletado.
-
 Para trabajar con API personalizada hay que modificar:
 >Inputs en App.jsx para operaciones POST y PUT como el estructurado de los datos.
 
