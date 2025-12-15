@@ -1,44 +1,47 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { URLContext } from '../contexts/api-url.context'
 import '../styles/ShowData.css'
 
 function ShowData() {
-  const { gettedData, methodRequest } = useContext(URLContext)
-  
+  const { gettedData, setGettedData, methodRequest } = useContext(URLContext)
   if (gettedData.length === 0) return <p>No hay datos</p>
   switch (methodRequest) {
     case "GET":
-      if (gettedData.length > 1) {
-        const userData = gettedData.map((user) => {
+      try {
+        if (gettedData.length >> 1) {
+          const userData = gettedData.map((user) => {
+            return (
+              <li className="user-card" key={user.id}>
+                <p>Identificador: <span className='data'>{user.id}</span></p>
+                <p>Nombre: <span className='data'>{user.name}</span></p>
+                <p>Correo: <span className='data'>{user.email}</span></p>
+                <p>Telefono: <span className='data'>{user.phone}</span></p>
+              </li>
+            )
+          })
           return (
-            <li className="user-card" key={user.id}>
-              <p>Identificador: <span className='data'>{user.id}</span></p>
-              <p>Nombre: <span className='data'>{user.name}</span></p>
-              <p>Correo: <span className='data'>{user.email}</span></p>
-              <p>Telefono: <span className='data'>{user.phone}</span></p>
-            </li>
+            <ul className="users">
+              {userData}
+            </ul>
           )
-        })
-        return (
-          <ul className="users">
-            {userData}
-          </ul>
-        )
-      } else {
-        return (
-          <ul className="users">
-            <li className="user-card" key={gettedData.id}>
-              <p>Identificador: <span className='data'>{gettedData.id}</span></p>
-              <p>Nombre: <span className='data'>{gettedData.name}</span></p>
-              <p>Correo: <span className='data'>{gettedData.email}</span></p>
-              <p>Telefono: <span className='data'>{gettedData.phone}</span></p>
-              <p>Nombre de usuario: <span className='data'>{gettedData.username}</span></p>
-              <p>Ubicación: <span className='data'>{gettedData.address.city}</span> calle: <span className='data'>{gettedData.address.street}</span></p>
-              <p>Sitio Web: <span className='data'>{gettedData.website}</span></p>
-              <p>Compañía: <span className='data'>{gettedData.company.name}</span></p>
-            </li>
-          </ul>
-        )
+        } else {
+          return (
+            <ul className="users">
+              <li className="user-card" key={gettedData.id}>
+                <p>Identificador: <span className='data'>{gettedData.id}</span></p>
+                <p>Nombre: <span className='data'>{gettedData.name}</span></p>
+                <p>Correo: <span className='data'>{gettedData.email}</span></p>
+                <p>Telefono: <span className='data'>{gettedData.phone}</span></p>
+                <p>Nombre de usuario: <span className='data'>{gettedData.username}</span></p>
+                <p>Ubicación: <span className='data'>{gettedData.address.city}</span> calle: <span className='data'>{gettedData.address.street}</span></p>
+                <p>Sitio Web: <span className='data'>{gettedData.website}</span></p>
+                <p>Compañía: <span className='data'>{gettedData.company.name}</span></p>
+              </li>
+            </ul>
+          )
+        }
+      } catch (e) {
+        console.log("hay un error, "+e);
       }
     case "POST":
       return (
@@ -55,6 +58,8 @@ function ShowData() {
     default:
       break;
   }
+
+  
 
 }
 

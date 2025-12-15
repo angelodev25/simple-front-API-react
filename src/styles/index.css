@@ -1,5 +1,21 @@
 body {
     background-color: rgb(4, 8, 13);
+    background-image:
+        linear-gradient(rgba(2, 9, 11, 0.618), rgba(9, 7, 17, 0.355)),
+        url("./nasa-Q1p7bh3SHj8-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
     color: lightgray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::before{
+    content:'';
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }

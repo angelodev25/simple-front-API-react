@@ -1,7 +1,23 @@
 #title-page {
   text-align: center;
   color: gray;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgba(0, 0, 0, 0.427);
+  text-rendering:auto;
+  font-style: italic;
+  width: 400px;
+  padding: 10px;
+  align-self: center;
+  justify-self: center;
+  cursor:default;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+#title-page:hover{
+    color: rgb(199, 199, 199);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.707);
 }
 
 .action-buttons {
@@ -14,12 +30,14 @@
     align-content: center;
     border: 2px solid rgba(42, 45, 54, 0.8);
     background-color: rgba(25, 21, 35, 0.361);
+    max-height: 180px;
+    min-height: 100px;
 
     .request-btn{
         width: 220px;
         border: 1px solid rgba(42, 45, 54, 0.8);
         color: gray;
-        background-color: rgba(32, 31, 36, 0.248);
+        background-color: rgba(32, 31, 36, 0.515);
         padding: 1rem;
         font-size: 1rem;
         cursor: pointer;
@@ -69,7 +87,7 @@
     margin: 1rem;
     border-radius: 15px;
     border: 1px solid rgba(42, 45, 54, 0.8);
-    background-color: rgba(25, 21, 35, 0.361);
+    background-color: rgba(29, 26, 36, 0.693);
     color: gray;
 }
 

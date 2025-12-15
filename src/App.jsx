@@ -6,7 +6,7 @@ console.time('Tiempo de renderizado')
 
 function App() {
   const URL_FIJA = "https://jsonplaceholder.typicode.com/users"
-  const { url, setUrl, methodRequest, setMethodRequest } = useContext(URLContext)
+  const { setUrl, methodRequest, setMethodRequest } = useContext(URLContext)
   const [methods, setMethods] = useState({
     GET: false,
     GETONE: false,
@@ -28,7 +28,6 @@ function App() {
     setMethods({
       [method]: true
     })
-    setMakeRequest(false)
     setDataToPost("")
     if (method === "GETONE") {
       setMethodRequest("GET")
@@ -69,6 +68,7 @@ function App() {
 
   const handleClick = (e) => {
     e.preventDefault()
+    setMakeRequest(false);
     const btn = e.target.id
     switch (btn) {
       case "get-btn":

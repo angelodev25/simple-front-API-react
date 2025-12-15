@@ -11,8 +11,8 @@ function APIConnection({post_data}) {
     if (!url) return
     const controller = new AbortController()
     const signal = controller.signal
+    setGettedData([])
     const doRequest = async () => {
-      setGettedData([])
       try {
         const options = methodRequest === "GET" ?
         {method: "GET", signal}
@@ -32,6 +32,7 @@ function APIConnection({post_data}) {
 
     doRequest()
 
+
     return () => {
       controller.abort()
       setGettedData([])
@@ -40,7 +41,6 @@ function APIConnection({post_data}) {
 
    return (
      <>
-      <h3 id="title">Respuesta del API</h3>
       {err ? (<><br/><strong id="error">Ocurrió un error: {err.message}</strong></>) : <>
           {gettedData.length !== 0 ? <ShowData /> : <p id="loading">Cargando...</p>}
         </>}
