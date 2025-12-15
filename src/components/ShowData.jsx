@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { URLContext } from '../contexts/apt-url.context'
+import { URLContext } from '../contexts/api-url.context'
 import '../styles/ShowData.css'
 
 function ShowData() {

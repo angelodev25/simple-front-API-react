@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { URLContext } from "../contexts/apt-url.context"
+import { URLContext } from "../contexts/api-url.context"
 import "../styles/APIConnection.css"
 import ShowData from "./ShowData"
 

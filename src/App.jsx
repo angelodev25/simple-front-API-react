@@ -1,6 +1,6 @@
 import './styles/App.css'
 import { useContext, useEffect, useState } from 'react'
-import { URLContext } from './contexts/apt-url.context'
+import { URLContext } from './contexts/api-url.context'
 import APIConnection from './components/APIConnection'
 console.time('Tiempo de renderizado')
 
@@ -74,24 +74,19 @@ function App() {
       case "get-btn":
         handleMethods("GET")
         setUrl(URL_FIJA)
-        console.log(methodRequest);
         setMakeRequest(true)
         break;
       case "get-one-btn":
         handleMethods("GETONE")
-        console.log(methodRequest);
         break;
       case "post-btn":
         handleMethods("POST")
-        console.log(methodRequest);
         break;
       case "put-btn":
         handleMethods("PUT")
-        console.log(methodRequest);
         break;
       case "delete-btn":
         handleMethods("DELETE")
-        console.log(methodRequest);
         break;
       default:
         break;
